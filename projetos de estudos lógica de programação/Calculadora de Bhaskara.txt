@@ -1,3 +1,5 @@
+// Lógica para realização de cálculo para a determinalçao das raízes de uma Equação do 2º Grau, desenvolvido no Portugol Studio  
+
 
 programa {
     
