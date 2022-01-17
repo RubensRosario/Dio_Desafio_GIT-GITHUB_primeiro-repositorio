@@ -1,0 +1,47 @@
+
+programa {
+    
+    inclua biblioteca Tipos --> tp
+    inclua biblioteca Matematica --> mat
+	funcao inicio() {
+		
+	real a, b, c, delta, X1, X2, Xx1, Xx2, raizdelta	// declaração das variáveis para receber os coeficientes, delta e as raízes 
+	cadeia aluno // variavel para receber o nome do aluno
+	cadeia A, B, C
+	escreva ("****************************************", "\n")
+	escreva ("**Calculadora para Fórmula de Bháskara**", "\n")
+	escreva ("****************************************")
+	escreva("\n")
+	escreva ("  Seja bem vindo aluno!", "\n", "\n")
+	escreva ("Qual é o seu nome: ")
+	leia (aluno)
+	escreva("\n")
+	escreva ("Oi "+ aluno +" vamos calcular as raízes da equação do 2º grau." , "\n", "\n")
+	escreva ("Informe os Valores dos Coeficientes a, b e c (com os seus respectivos sinais):", "\n", "\n")
+	escreva ("Digite o coeficiente a.", "\n")
+	leia (A)
+	escreva ("Digite o coeficiente b.", "\n")
+	leia (B)
+	escreva ("Digite o coeficiente c.", "\n")
+	leia (C)
+	escreva("\n", "\n")
+	a = tp.cadeia_para_real(A)
+    b = tp.cadeia_para_real(B)
+    c = tp.cadeia_para_real(C)
+	escreva ("  Sua Equação é: "+ A +"x²"+ B +"x"+ C + " = 0")
+	escreva("\n", "\n")
+	delta = ((b*b)-4*a*c)
+	raizdelta = mat.raiz (delta, 2.0)
+	X1 = (-b + raizdelta)/(2*a)
+	Xx1 = mat.arredondar(X1,3)
+	X2 = (-b - raizdelta)/(2*a)
+	Xx2 = mat.arredondar(X2,3)
+	escreva("  Delta = ",delta, "\n", "\n")
+	se (delta<0)
+	escreva ("  Delta = ",delta, " é um número negativo, portanto essa equação não tem solução no CONJUTO DOS NÚMEROS REAIS.")
+	senao 
+	escreva ("As raízes da equção da "+ A +"x²"+ B +"x"+ C + " = 0 é:" ,"\n","\n"
+	         ,"     x1 = ",Xx1," e ","x2 = ",Xx2)
+	
+	}
+}
